@@ -18,11 +18,11 @@ template:
 # Below are example actions, full list at https://lab.github.com/docs/actions/
 before:
 - type: updateBranchProtection # Protects the master branch 
-- type: createIssue 
-  title: Getting Started with GitHub
-  body: introduction.md
-  store:
-    first_issue_url: '{{ result.data.html_url }}'
+# - type: createIssue 
+#   title: Getting Started with GitHub
+#   body: introduction.md
+#   store:
+#     first_issue_url: '{{ result.data.html_url }}'
   
 # Steps for the course
 # A list of steps that take the learner through the course
@@ -33,7 +33,7 @@ steps:
 - title: Close an issue # the title of the step, shown to the learner in the course progress page
   description: Example step for course # a description of the step, shown to the learner in the course progress page
   event: issues.closed # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-  link: '{{ store.first_issue_url }}' 
+#   link: '{{ store.first_issue_url }}' 
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: createPullRequest
     title: example-action
