@@ -18,11 +18,11 @@ template:
 # Below are example actions, full list at https://lab.github.com/docs/actions/
 before:
 - type: updateBranchProtection # Protects the master branch 
-# - type: createIssue 
-#   title: Getting Started with GitHub
-#   body: introduction.md
-#   store:
-#     first_issue_url: '{{ result.data.html_url }}'
+- type: createIssue 
+  title: Getting Started with GitHub
+  body: introduction.md
+  store:
+    first_issue_url: '{{ result.data.html_url }}'
   
 # Steps for the course
 # A list of steps that take the learner through the course
