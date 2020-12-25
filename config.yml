@@ -18,11 +18,9 @@ template:
 # Below are example actions, full list at https://lab.github.com/docs/actions/
 before:
 - type: updateBranchProtection # Protects the master branch 
-# - type: createIssue 
-#   title: Getting Started with GitHub
-#   body: introduction.md
-#   store:
-#     first_issue_url: '{{ result.data.html_url }}'
+- type: createIssue
+  title: Getting started with NanoMFG
+  body: 01_NanoMFG.md
   
 # Steps for the course
 # A list of steps that take the learner through the course
@@ -33,7 +31,7 @@ steps:
 - title: Close an issue # the title of the step, shown to the learner in the course progress page
   description: Example step for course # a description of the step, shown to the learner in the course progress page
   event: issues.closed # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#   link: '{{ store.first_issue_url }}' 
+  link: '{{ repoUrl }}/issues/1' 
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: createPullRequest
     title: example-action
@@ -41,6 +39,62 @@ steps:
     body: example-pull.md
 
 # Step 2: INTERNAL COMMENT FOR STEP 2
+# - title: 
+#  description: 
+#  event: 
+#  actions: 
+#  - type: 
+
+# Step 3: INTERNAL COMMENT FOR STEP 3
+# - title: 
+#  description: 
+#  event: 
+#  actions: 
+#  - type: 
+
+# Step 4: INTERNAL COMMENT FOR STEP 4
+# - title: 
+#  description: 
+#  event: 
+#  actions: 
+#  - type: 
+
+# Step 5: INTERNAL COMMENT FOR STEP 5
+# - title: 
+#  description: 
+#  event: 
+#  actions: 
+#  - type: 
+
+# Step 6: INTERNAL COMMENT FOR STEP 6
+# - title: 
+#  description: 
+#  event: 
+#  actions: 
+#  - type: 
+
+# Step 7: INTERNAL COMMENT FOR STEP 7
+# - title: 
+#  description: 
+#  event: 
+#  actions: 
+#  - type: 
+
+# Step 8: INTERNAL COMMENT FOR STEP 8
+# - title: 
+#  description: 
+#  event: 
+#  actions: 
+#  - type: 
+
+# Step 9: INTERNAL COMMENT FOR STEP 9
+# - title: 
+#  description: 
+#  event: 
+#  actions: 
+#  - type: 
+
+# Step 10: INTERNAL COMMENT FOR STEP 10
 # - title: 
 #  description: 
 #  event: 
